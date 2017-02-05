@@ -5,12 +5,8 @@ export default class PhotoGrid extends Component {
     render(){
         return(
             <div className="photo-grid">   
-                <h1>
-                    <Link to="/">This is the photo grid</Link>
-                </h1>
+                <Link to="/">This is the photo grid</Link>
             </div>
         )
     }
 }
-
-export default PhotoGrid
