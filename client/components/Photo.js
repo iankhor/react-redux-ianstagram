@@ -8,7 +8,7 @@ export default class Photo extends Component{
         return(
             <figure className="grid-figure">
                 <div className="grid-photo-wrap">   
-                    <Link to={`/view/>${post.code}`} >
+                    <Link to={`/view/${post.code}`} >
                         <img src={post.display_src} alt={post.caption} className="grid-photo" />
                     </Link>
                     
@@ -20,7 +20,7 @@ export default class Photo extends Component{
                 <figcaption>
                     <p>{post.caption}</p>
                     <div className="control-buttons">
-                        <button className="likes">&hearts; {post.likes}</button>
+                        <button onClick={ this.props.increment.bind(null, index) } className="likes">&hearts; {post.likes}</button>
                         <Link className="button" to={`/view/${post.code}`}>
                             <span className="comment-count">
                                 <span className="speech-bubble"></span>
