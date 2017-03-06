@@ -1,7 +1,6 @@
 // reducer takes in two things : action and a copy of current state
 
 function postComments(state=[], action){
-    console.log(action.type)
     switch(action.type){
         case 'ADD_COMMENT':
             return [...state, {
@@ -11,11 +10,13 @@ function postComments(state=[], action){
             ]
 
         case 'REMOVE_COMMENT':
-            console.log('removing comments')
+            // console.log('removing comments')
+            // console.log(action)
             return [
-                ...state.slice(0,action.i),
-                ...state.slice(action.i + 1)
+                ...state.slice(0,action.index),
+                ...state.slice(action.index+1)
             ]
+            // return state
 
         default:
             return state
